@@ -1,10 +1,12 @@
 # Setup
 
 ## Requirements
+
 - Node.js 20+
 - pnpm 10+
 
 ## Install dependencies
+
 Run only from repository root:
 
 ```bash
@@ -14,6 +16,7 @@ pnpm install
 Do not run `npm install` or `pnpm install` inside `apps/*` or `packages/*`.
 
 ## Add new packages
+
 Always add dependencies from repository root.
 
 Add to `apps/web`:
@@ -47,6 +50,7 @@ pnpm -r add <package-name>
 ```
 
 ## Run projects
+
 From repository root.
 
 Run all projects in parallel:
@@ -68,6 +72,7 @@ pnpm --filter web dev
 ```
 
 ## Build
+
 Build all:
 
 ```bash
@@ -87,6 +92,7 @@ pnpm --filter web build
 ```
 
 ## Tests and lint
+
 Run all tests:
 
 ```bash
@@ -106,6 +112,7 @@ pnpm --filter api test
 ```
 
 ## Notes
+
 - One Git repository only at root.
 - One primary `.gitignore` at root.
 - `node_modules` is managed by pnpm workspace from root; do not manage it per app manually.
