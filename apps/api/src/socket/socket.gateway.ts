@@ -1,4 +1,10 @@
 import {
+  SocketEventName,
+  pingRequestSchema,
+  pongResponseSchema,
+  type PongResponseDto,
+} from '@final-wire/shared';
+import {
   ConnectedSocket,
   MessageBody,
   OnGatewayConnection,
@@ -30,15 +36,19 @@ export class SocketGateway implements OnGatewayConnection, OnGatewayDisconnect {
     this.logger.debug(`Client disconnected: ${client.id}`);
   }
 
-  @SubscribeMessage('ping')
-  handlePing(@MessageBody() body: unknown, @ConnectedSocket() client: Socket) {
-    return {
-      event: 'pong',
+  @SubscribeMessage(SocketEventName.Ping)
+  handlePing(
+    @MessageBody() body: unknown,
+    @ConnectedSocket() client: Socket,
+  ): PongResponseDto {
+    const received = body == null ? null : pingRequestSchema.parse(body);
+    return pongResponseSchema.parse({
+      event: SocketEventName.Pong,
       data: {
-        message: 'pong',
-        received: body ?? null,
+        message: SocketEventName.Pong,
+        received,
         clientId: client.id,
       },
-    };
+    });
   }
 }
