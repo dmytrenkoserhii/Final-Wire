@@ -1,0 +1,46 @@
+.btn {
+  font-family: var(--fw-font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.label {
+  letter-spacing: inherit;
+  text-transform: inherit;
+  font-weight: inherit;
+}
+
+.primary {
+  box-shadow: var(--fw-neon-shadow);
+}
+
+.primary:hover {
+  box-shadow: 0 0 0 1px var(--fw-border-strong), 0 0 32px var(--fw-accent-glow);
+}
+
+.danger {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--fw-danger) 50%, transparent),
+    0 0 18px color-mix(in srgb, var(--fw-danger) 35%, transparent);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--fw-text);
+  border: 1px solid var(--fw-border);
+}
+
+.ghost:hover {
+  background: color-mix(in srgb, var(--fw-accent) 10%, transparent);
+  border-color: var(--fw-border-strong);
+}

@@ -1,0 +1,44 @@
+.board {
+  background: #050810;
+  border: 1px solid var(--fw-border);
+  min-height: 280px;
+}
+
+.boardGrid {
+  align-items: stretch;
+}
+
+.portCol {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 16px;
+  padding: 12px 8px;
+  background: #0a1020;
+  border: 1px solid var(--fw-border);
+  border-radius: 8px;
+}
+
+.port {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.svg {
+  width: 100%;
+  height: 240px;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}

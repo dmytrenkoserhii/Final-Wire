@@ -1,0 +1,45 @@
+.progress {
+  border: 1px solid var(--fw-border);
+  background: var(--fw-bg-elevated);
+}
+
+.slot {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--fw-border);
+  background: #050810;
+  color: var(--fw-text-dim);
+}
+
+.slotFilled {
+  color: var(--fw-accent);
+  border-color: var(--fw-accent);
+  text-shadow: 0 0 12px var(--fw-accent-glow);
+  background: color-mix(in srgb, var(--fw-accent) 8%, transparent);
+}
+
+.cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fw-text);
+  border: 1px solid var(--fw-border);
+  border-radius: var(--mantine-radius-sm);
+  background: var(--fw-bg-elevated);
+  transition: all 0.12s ease;
+}
+
+.cell:hover {
+  border-color: var(--fw-accent);
+  color: var(--fw-accent);
+  background: color-mix(in srgb, var(--fw-accent) 10%, transparent);
+  box-shadow: 0 0 0 1px var(--fw-accent), 0 0 18px var(--fw-accent-glow);
+}
+
+.cell:active {
+  transform: scale(0.97);
+}

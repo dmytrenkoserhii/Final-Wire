@@ -1,0 +1,59 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--fw-accent);
+}
+
+.mark {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 0 6px var(--fw-accent-glow));
+}
+
+.sm .mark {
+  width: 28px;
+  height: 28px;
+}
+.lg .mark {
+  width: 64px;
+  height: 64px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.title {
+  font-family: var(--fw-font-display);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.18em;
+  color: var(--fw-text);
+}
+
+.lg .title {
+  font-size: 38px;
+  letter-spacing: 0.24em;
+}
+.sm .title {
+  font-size: 14px;
+}
+
+.subtitle {
+  font-family: var(--fw-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fw-text-dim);
+  margin-top: 4px;
+}
+
+.lg .subtitle {
+  font-size: 12px;
+}
+.sm .subtitle {
+  font-size: 9px;
+}

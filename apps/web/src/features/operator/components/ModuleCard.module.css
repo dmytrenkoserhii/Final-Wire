@@ -1,0 +1,55 @@
+.card {
+  display: block;
+  width: 100%;
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+}
+
+.card:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.inner {
+  position: relative;
+  background: var(--fw-bg-elevated);
+  border: 1px solid var(--fw-border);
+  min-height: 132px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover:not(:disabled) .inner {
+  border-color: var(--fw-border-strong);
+  box-shadow: 0 0 0 1px var(--fw-border-strong), 0 0 24px var(--fw-accent-glow);
+}
+
+.card:disabled {
+  opacity: 0.85;
+}
+
+.active .inner {
+  border-color: var(--fw-accent);
+  box-shadow: 0 0 0 1px var(--fw-accent), 0 0 28px var(--fw-accent-glow);
+  background: linear-gradient(180deg, var(--fw-bg-panel-strong), var(--fw-bg-panel));
+}
+
+.state_SOLVED .inner {
+  border-color: color-mix(in srgb, var(--fw-success) 50%, transparent);
+}
+.state_FAILED .inner {
+  border-color: color-mix(in srgb, var(--fw-danger) 50%, transparent);
+}
+
+.icon {
+  text-shadow: 0 0 12px var(--fw-accent-glow);
+}
+
+.name {
+  font-family: var(--fw-font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mistakes {
+  position: absolute;
+  bottom: 12px;
+  right: 14px;
+}

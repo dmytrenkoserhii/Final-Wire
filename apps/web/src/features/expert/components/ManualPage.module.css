@@ -1,0 +1,120 @@
+.page {
+  background: var(--fw-paper-bg);
+  color: var(--fw-paper-text);
+  border: 1px solid var(--fw-paper-line);
+  border-radius: 12px;
+  padding: 32px 40px 24px;
+  font-family: var(--fw-font-mono);
+  font-size: 14px;
+  line-height: 1.75;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    var(--fw-paper-line) 27px,
+    var(--fw-paper-line) 28px
+  );
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  left: 56px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: color-mix(in srgb, var(--fw-danger) 50%, transparent);
+  opacity: 0.45;
+}
+
+.head {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--fw-paper-line);
+}
+
+.chapter {
+  font-family: var(--fw-font-mono);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.title {
+  font-family: var(--fw-font-display);
+  font-size: 26px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.subtitle {
+  margin: 0;
+  font-style: italic;
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+.content :global(ol),
+.content :global(ul) {
+  padding-left: 24px;
+}
+
+.content :global(li) {
+  margin-bottom: 6px;
+}
+
+.content :global(h3) {
+  font-family: var(--fw-font-display);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 18px 0 8px;
+  border-left: 3px solid var(--fw-paper-line);
+  padding-left: 8px;
+}
+
+.content :global(table) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.content :global(th),
+.content :global(td) {
+  border: 1px solid var(--fw-paper-line);
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.content :global(th) {
+  background: color-mix(in srgb, var(--fw-paper-line) 25%, transparent);
+  font-family: var(--fw-font-display);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.content :global(code),
+.content :global(.kbd) {
+  background: color-mix(in srgb, var(--fw-paper-line) 30%, transparent);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: var(--fw-font-mono);
+}
+
+.foot {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--fw-paper-line);
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}

@@ -1,0 +1,34 @@
+.shell {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(360px, 480px) 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+@media (max-width: 1024px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gridSection {
+  align-self: start;
+}
+
+.detailSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+}
+
+.prompt {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed var(--fw-border);
+  background: var(--fw-bg-elevated);
+  animation: fw-blink 2s ease-in-out infinite;
+}

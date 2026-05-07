@@ -1,0 +1,35 @@
+.root {
+  position: fixed;
+  z-index: 9999;
+  bottom: 12px;
+  right: 12px;
+  max-width: 260px;
+  border: 1px solid var(--fw-border);
+  background: color-mix(in srgb, var(--fw-bg) 92%, transparent);
+  backdrop-filter: blur(8px);
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+
+.closed {
+  max-width: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.toggle {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 2;
+}
+
+.closed .toggle {
+  position: static;
+}
+
+.body {
+  max-height: 65vh;
+  overflow-y: auto;
+}

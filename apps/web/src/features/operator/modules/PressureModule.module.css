@@ -1,0 +1,96 @@
+.help {
+  font-family: var(--fw-font-mono);
+  font-size: 12px;
+  color: var(--fw-text-dim);
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 8px;
+  border: 1px solid var(--fw-border);
+  border-radius: 12px;
+  background: #050810;
+  color: var(--fw-text);
+  cursor: pointer;
+  font: inherit;
+  transition: all 0.18s ease;
+}
+
+.switch:hover {
+  border-color: var(--fw-border-strong);
+}
+
+.knob {
+  position: relative;
+  width: 36px;
+  height: 70px;
+  border-radius: 22px;
+  background: #0d1322;
+  border: 1px solid var(--fw-border-strong);
+  display: block;
+}
+
+.knob::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #2a3450, #0a0f1a);
+  border: 1px solid var(--fw-border-strong);
+  transform: translateX(-50%);
+  transition:
+    top 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.off .knob::before {
+  top: 38px;
+}
+.on .knob::before {
+  top: 4px;
+  background: linear-gradient(
+    180deg,
+    var(--fw-accent),
+    color-mix(in srgb, var(--fw-accent) 50%, black)
+  );
+  box-shadow: 0 0 14px var(--fw-accent-glow);
+}
+
+.label {
+  font-family: var(--fw-font-display);
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: var(--fw-text);
+}
+
+.state {
+  font-family: var(--fw-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fw-text-dim);
+}
+
+.on .state {
+  color: var(--fw-accent);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}

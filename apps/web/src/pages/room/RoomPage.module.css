@@ -1,0 +1,9 @@
+.code {
+  font-family: var(--fw-font-display);
+  font-size: clamp(36px, 6vw, 56px);
+  letter-spacing: 0.16em;
+  color: var(--fw-accent);
+  text-shadow: 0 0 18px var(--fw-accent-glow);
+  font-weight: 700;
+  margin: 0;
+}

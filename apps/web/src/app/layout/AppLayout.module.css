@@ -1,0 +1,59 @@
+.shell {
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      color-mix(in srgb, var(--fw-accent) 8%, transparent),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 90% 100%,
+      color-mix(in srgb, var(--fw-accent) 5%, transparent),
+      transparent 50%
+    ),
+    var(--fw-bg);
+}
+
+.header {
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--fw-bg) 80%, transparent);
+  border-bottom: 1px solid var(--fw-border);
+}
+
+.brand {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.navLink {
+  font-family: var(--fw-font-display);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: var(--fw-text-dim);
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.navLink:hover {
+  color: var(--fw-text);
+  background: color-mix(in srgb, var(--fw-accent) 6%, transparent);
+}
+
+.navLinkActive {
+  color: var(--fw-accent);
+  border-color: var(--fw-border-strong);
+  background: color-mix(in srgb, var(--fw-accent) 10%, transparent);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}

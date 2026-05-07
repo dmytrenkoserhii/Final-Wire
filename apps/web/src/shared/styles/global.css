@@ -1,0 +1,163 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fw-bg);
+  color: var(--fw-text);
+  font-family: var(--mantine-font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--fw-accent-glow);
+  color: var(--fw-text);
+}
+
+a {
+  color: var(--fw-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Reusable surface tokens */
+.fw-surface {
+  background: var(--fw-bg-panel);
+  border: 1px solid var(--fw-border);
+  border-radius: 12px;
+  box-shadow: var(--fw-panel-shadow);
+}
+
+.fw-surface-strong {
+  background: var(--fw-bg-panel-strong);
+  border: 1px solid var(--fw-border-strong);
+  border-radius: 12px;
+  box-shadow: var(--fw-panel-shadow);
+}
+
+.fw-grid-bg {
+  background-image:
+    linear-gradient(var(--fw-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fw-grid-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.fw-scanlines {
+  position: relative;
+}
+.fw-scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    var(--fw-scanline) 2px,
+    var(--fw-scanline) 3px
+  );
+  border-radius: inherit;
+}
+
+.fw-mono {
+  font-family: var(--fw-font-mono);
+  letter-spacing: 0.04em;
+}
+
+.fw-display {
+  font-family: var(--fw-font-display);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fw-text-dim {
+  color: var(--fw-text-dim);
+}
+
+/* Animations */
+@keyframes fw-pulse-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px var(--fw-border-strong),
+      0 0 18px var(--fw-accent-glow);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px var(--fw-border-strong),
+      0 0 36px var(--fw-accent-glow);
+  }
+}
+
+@keyframes fw-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  24%,
+  55% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes fw-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fw-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes fw-spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fw-particle-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-40px, -60px, 0);
+  }
+}
