@@ -1,0 +1,19 @@
+.heading {
+  font-family: var(--fw-font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fw-text);
+}
+
+.accent {
+  text-shadow: 0 0 16px var(--fw-accent-glow);
+}
+
+.cardTitle {
+  font-family: var(--fw-font-display);
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fw-text);
+}

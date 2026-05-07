@@ -1,0 +1,28 @@
+.slot {
+  position: relative;
+  background: var(--fw-bg-elevated);
+  border: 1px solid var(--fw-border);
+  min-height: 120px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.slot.ready {
+  border-color: color-mix(in srgb, var(--fw-success) 60%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--fw-success) 30%, transparent),
+    0 0 24px color-mix(in srgb, var(--fw-success) 20%, transparent);
+}
+
+.empty {
+  border-style: dashed;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.placeholder {
+  animation: fw-blink 2s ease-in-out infinite;
+}

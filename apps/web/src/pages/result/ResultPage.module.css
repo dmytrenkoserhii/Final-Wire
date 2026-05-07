@@ -1,0 +1,82 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  animation: fw-fade-in 0.5s ease both;
+}
+
+.heroWin {
+  background:
+    radial-gradient(
+      ellipse at center,
+      color-mix(in srgb, var(--fw-success) 25%, transparent),
+      transparent 70%
+    ),
+    var(--fw-bg-elevated);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--fw-success) 50%, transparent),
+    0 0 60px color-mix(in srgb, var(--fw-success) 30%, transparent);
+}
+
+.heroLoss {
+  background:
+    radial-gradient(
+      ellipse at center,
+      color-mix(in srgb, var(--fw-danger) 25%, transparent),
+      transparent 70%
+    ),
+    var(--fw-bg-elevated);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--fw-danger) 50%, transparent),
+    0 0 60px color-mix(in srgb, var(--fw-danger) 30%, transparent);
+}
+
+.heroLabel {
+  margin-bottom: 8px;
+}
+
+.heroLoss .heroLabel {
+  animation: fw-flicker 3s linear infinite;
+}
+
+.heroTitle {
+  font-family: var(--fw-font-display);
+  font-size: clamp(56px, 12vw, 120px);
+  letter-spacing: 0.18em;
+  line-height: 1;
+  margin: 0;
+}
+
+.heroWin .heroTitle {
+  color: var(--fw-success);
+  text-shadow: 0 0 32px color-mix(in srgb, var(--fw-success) 50%, transparent);
+}
+.heroLoss .heroTitle {
+  color: var(--fw-danger);
+  text-shadow: 0 0 32px color-mix(in srgb, var(--fw-danger) 50%, transparent);
+  animation: fw-flicker 5s linear infinite;
+}
+
+.statValueAccent {
+  text-shadow: 0 0 14px var(--fw-accent-glow);
+}
+
+.breakdown {
+  margin-top: 24px;
+}
+
+.modRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--fw-border);
+  background: var(--fw-bg-elevated);
+}
+
+.modName {
+  color: var(--fw-text);
+}

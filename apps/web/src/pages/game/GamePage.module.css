@@ -1,0 +1,25 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      ellipse at 50% -10%,
+      color-mix(in srgb, var(--fw-accent) 12%, transparent),
+      transparent 50%
+    ),
+    var(--fw-bg);
+  background-image:
+    linear-gradient(var(--fw-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fw-grid-line) 1px, transparent 1px);
+  background-size:
+    32px 32px,
+    32px 32px;
+  background-position: center;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,30 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--fw-border-strong);
+  background: var(--fw-bg-elevated);
+  min-width: 200px;
+}
+
+.value {
+  color: var(--fw-accent);
+  text-shadow: 0 0 18px var(--fw-accent-glow);
+  font-variant-numeric: tabular-nums;
+}
+
+.warn .value {
+  color: var(--fw-warning);
+  text-shadow: 0 0 18px color-mix(in srgb, var(--fw-warning) 60%, transparent);
+}
+
+.crit {
+  border-color: var(--fw-danger);
+  animation: fw-pulse-glow 1s ease-in-out infinite;
+}
+
+.crit .value {
+  color: var(--fw-danger);
+  text-shadow: 0 0 18px color-mix(in srgb, var(--fw-danger) 60%, transparent);
+}

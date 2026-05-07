@@ -1,0 +1,68 @@
+.card {
+  position: relative;
+  background: var(--fw-bg-panel);
+  border: 1px solid var(--fw-border);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--fw-panel-shadow);
+}
+
+.panel {
+  background: linear-gradient(180deg, var(--fw-bg-panel-strong), var(--fw-bg-panel));
+}
+
+.paper {
+  background: var(--fw-paper-bg);
+  color: var(--fw-paper-text);
+  border-color: var(--fw-paper-line);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    var(--fw-paper-line) 27px,
+    var(--fw-paper-line) 28px
+  );
+}
+
+.glow {
+  animation: fw-pulse-glow 3s ease-in-out infinite;
+}
+
+.cornerTL,
+.cornerTR,
+.cornerBL,
+.cornerBR {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--fw-border-strong);
+  pointer-events: none;
+}
+.cornerTL {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-left-radius: 12px;
+}
+.cornerTR {
+  top: -1px;
+  right: -1px;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  border-top-right-radius: 12px;
+}
+.cornerBL {
+  bottom: -1px;
+  left: -1px;
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-bottom-left-radius: 12px;
+}
+.cornerBR {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-bottom-right-radius: 12px;
+}

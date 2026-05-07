@@ -1,14 +1,15 @@
-import './App.css'
-import { HealthStatus, SocketEventName } from '@final-wire/shared'
+import { BrowserRouter } from 'react-router-dom'
+import { AppProviders } from './app/providers'
+import { AppRouter } from './app/router'
+import { DevToolbar } from './dev/DevToolbar'
 
 export default function App() {
   return (
-    <main className="app">
-      <h1>Final Wire</h1>
-      <p>Health contract: {HealthStatus.Ok}</p>
-      <p>
-        WS contracts: {SocketEventName.Ping} / {SocketEventName.Pong}
-      </p>
-    </main>
+    <AppProviders>
+      <BrowserRouter>
+        <AppRouter />
+        {import.meta.env.DEV && <DevToolbar />}
+      </BrowserRouter>
+    </AppProviders>
   )
 }

@@ -64,3 +64,6 @@ tmp/
 
 # Misc
 report.*.json
+
+# Docs
+docs/

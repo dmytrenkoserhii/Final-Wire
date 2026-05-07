@@ -1,0 +1,42 @@
+.heading {
+  font-family: var(--fw-font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fw-text);
+  margin: 0;
+}
+
+.avatarFrame {
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--fw-border-strong);
+  background: var(--fw-bg-elevated);
+  box-shadow: 0 0 24px var(--fw-accent-glow);
+}
+
+.name {
+  font-family: var(--fw-font-display);
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--fw-text);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--fw-border);
+  background: var(--fw-bg-elevated);
+}
+
+.historyRow {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--fw-border);
+  background: var(--fw-bg-elevated);
+}

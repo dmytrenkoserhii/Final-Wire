@@ -1,0 +1,53 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border: 1px solid var(--fw-border-strong);
+  background: linear-gradient(180deg, var(--fw-bg-panel-strong), var(--fw-bg-panel));
+  box-shadow: var(--fw-panel-shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+.shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    var(--fw-scanline) 2px,
+    var(--fw-scanline) 3px
+  );
+  border-radius: inherit;
+}
+
+.header {
+  border-bottom: 1px solid var(--fw-border);
+  background: var(--fw-bg-panel);
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  font-family: var(--fw-font-display);
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fw-text);
+}
+
+.body {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  border-top: 1px solid var(--fw-border);
+  background: var(--fw-bg-panel);
+  position: relative;
+  z-index: 1;
+}

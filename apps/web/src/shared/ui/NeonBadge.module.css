@@ -1,0 +1,51 @@
+.badge {
+  font-family: var(--fw-font-display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.label {
+  letter-spacing: inherit;
+  text-transform: inherit;
+  font-weight: inherit;
+}
+
+.cyan {
+  --badge-dot-color: var(--fw-accent);
+  color: var(--fw-accent);
+  border-color: color-mix(in srgb, var(--fw-accent) 40%, transparent);
+  background: color-mix(in srgb, var(--fw-accent) 10%, transparent);
+}
+
+.amber {
+  --badge-dot-color: var(--fw-warning);
+  color: var(--fw-warning);
+  border-color: color-mix(in srgb, var(--fw-warning) 40%, transparent);
+  background: color-mix(in srgb, var(--fw-warning) 10%, transparent);
+}
+
+.red {
+  --badge-dot-color: var(--fw-danger);
+  color: var(--fw-danger);
+  border-color: color-mix(in srgb, var(--fw-danger) 40%, transparent);
+  background: color-mix(in srgb, var(--fw-danger) 10%, transparent);
+}
+
+.green {
+  --badge-dot-color: var(--fw-success);
+  color: var(--fw-success);
+  border-color: color-mix(in srgb, var(--fw-success) 40%, transparent);
+  background: color-mix(in srgb, var(--fw-success) 10%, transparent);
+}
+
+.muted {
+  --badge-dot-color: var(--fw-text-dim);
+  color: var(--fw-text-dim);
+  border-color: color-mix(in srgb, var(--fw-text-dim) 30%, transparent);
+  background: color-mix(in srgb, var(--fw-text-dim) 8%, transparent);
+}
+
+.pulse {
+  animation: fw-blink 1.4s ease-in-out infinite;
+}

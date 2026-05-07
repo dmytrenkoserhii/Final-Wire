@@ -1,0 +1,118 @@
+.shell {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(
+      ellipse at 50% 30%,
+      color-mix(in srgb, var(--fw-accent) 12%, transparent),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 50% 90%,
+      color-mix(in srgb, var(--fw-accent) 6%, transparent),
+      transparent 50%
+    ),
+    var(--fw-bg);
+  overflow: hidden;
+}
+
+.themeSlot {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  z-index: 5;
+}
+
+.gridBg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--fw-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--fw-grid-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+  pointer-events: none;
+}
+
+.particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.particles span {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--fw-accent);
+  box-shadow: 0 0 8px var(--fw-accent-glow);
+  opacity: 0.7;
+  top: calc((var(--i) * 4.17%) + 6%);
+  left: calc((var(--i) * 4.17%) + 2%);
+  animation:
+    fw-particle-drift calc(8s + (var(--i) * 0.6s)) ease-in-out infinite alternate,
+    fw-blink calc(2.4s + (var(--i) * 0.1s)) ease-in-out infinite;
+}
+
+.main {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+  gap: 28px;
+  z-index: 1;
+  animation: fw-fade-in 0.6s ease both;
+}
+
+.statusRow {
+  display: flex;
+  gap: 12px;
+}
+
+.tagline {
+  max-width: 580px;
+  color: var(--fw-text-dim);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.fineprint {
+  font-family: var(--fw-font-mono);
+  font-size: 11px;
+  color: var(--fw-text-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer {
+  position: relative;
+  text-align: center;
+  padding: 16px;
+  font-family: var(--fw-font-mono);
+  font-size: 11px;
+  color: var(--fw-text-dim);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--fw-border);
+  z-index: 1;
+}
+
+.fwMono {
+  font-family: var(--fw-font-mono);
+}

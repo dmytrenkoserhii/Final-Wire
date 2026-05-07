@@ -1,0 +1,54 @@
+.shell {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+@media (max-width: 1024px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--fw-border-strong);
+  background: linear-gradient(180deg, var(--fw-bg-panel-strong), var(--fw-bg-panel));
+  position: sticky;
+  top: 96px;
+  align-self: flex-start;
+  height: fit-content;
+}
+
+.sidebarHead {
+  border-bottom: 1px solid var(--fw-border);
+}
+
+.navLink {
+  border-radius: var(--mantine-radius-sm);
+}
+
+.navLabel {
+  font-family: var(--fw-font-display);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.navDesc {
+  font-family: var(--fw-font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+}
+
+.tip {
+  border-style: dashed;
+  background: var(--fw-bg-elevated);
+}
+
+.content {
+  min-height: 480px;
+}
